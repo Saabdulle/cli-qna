@@ -7,6 +7,15 @@ import textwrap
 from datetime import datetime
 from google import genai
 from google.genai import types
+from pathlib import Path
+from dotenv import load_dotenv
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+load_dotenv(PROJECT_ROOT / ".env")
+
+# Fallback for globally installed CLI
+load_dotenv(Path.home() / ".config" / "cli-qna" / ".env")
 
 
 MODEL = "gemini-3.5-flash-lite"
