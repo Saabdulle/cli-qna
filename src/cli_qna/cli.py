@@ -14,7 +14,6 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(PROJECT_ROOT / ".env")
 
-# Fallback for globally installed CLI
 load_dotenv(Path.home() / ".config" / "cli-qna" / ".env")
 
 
