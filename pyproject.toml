@@ -1,0 +1,21 @@
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cli-qna"
+version = "0.1.0"
+description = "A lightweight Gemini-powered Q&A CLI"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai"
+]
+
+[project.scripts]
+qna = "cli_qna.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
